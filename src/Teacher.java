@@ -40,23 +40,13 @@ public class Teacher extends JFrame {
                 JOptionPane.showMessageDialog(null, "Teacher not found", "Error", JOptionPane.ERROR_MESSAGE);
             }
         });
-        btnAddGrades.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                GradeAssigner.assignGradesFromUI();
-            }
-        });
-        btnDeleteGrade.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                GradeDeleter.deleteGradesFromUI();
-            }
-        });
+        btnAddGrades.addActionListener(e -> GradeAssigner.assignGradesFromUI());
+        btnDeleteGrade.addActionListener(e -> GradeDeleter.deleteGradesFromUI());
     }
 
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
-            User testUser = new User();  // Create a test User instance for demonstration
+            User testUser = new User();
             testUser.name = "teacherUsername";
             Teacher teacherPage = new Teacher(testUser);
             teacherPage.setVisible(true);

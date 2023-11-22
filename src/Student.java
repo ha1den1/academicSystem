@@ -20,7 +20,6 @@ public class Student extends JFrame {
 
     private void showStudentGrades() {
         if (loggedInUser != null) {
-            // Only show grades for the logged-in student
             UserSubjectViewer.viewUserSubjectsAndGroups(loggedInUser.name);
         } else {
             JOptionPane.showMessageDialog(this,

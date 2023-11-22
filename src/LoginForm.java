@@ -56,7 +56,7 @@ public class LoginForm extends JDialog {
                 adminPage.setVisible(true);
                 adminPage.requestFocus();
             } else if (user.teacher == 1) {
-                Teacher teacherPage = new Teacher(user);  // Pass the User information
+                Teacher teacherPage = new Teacher(user);
                 teacherPage.setVisible(true);
             } else {
                 Student studentPage = new Student(user);
